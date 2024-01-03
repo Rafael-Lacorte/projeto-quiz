@@ -14,7 +14,6 @@ class MateriaController
         $materias = Materia::all();
         return $materias;
     }
-
     public function store(Request $request)
     {
         $name = $request->input('name');
@@ -22,13 +21,6 @@ class MateriaController
         $materia->name = $name;
         $materia->save();
 
-
-//    }
-//        $name = $request->input('name');
-//        if (DB::insert('INSERT INTO materia (name) VALUES (?)',[$name])) {
-//            return 'inserido';
-//        }
-//        return 'Deu erro';
     }
 
 }
