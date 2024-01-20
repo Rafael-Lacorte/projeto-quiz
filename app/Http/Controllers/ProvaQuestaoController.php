@@ -32,10 +32,10 @@ class ProvaQuestaoController extends Controller
 
     }
 
-    public function grade()
+    public function grade($provaId)
     {
         $provaQuestao =  new ProvaQuestao();
-        $prova = Prova::find('2');
+        $prova = Prova::find($provaId);
         $provaQuestao->grade($prova);
         $prova->status = 'Concluída';
         $prova->save();
