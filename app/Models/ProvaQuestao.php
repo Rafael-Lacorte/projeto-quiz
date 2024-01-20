@@ -32,8 +32,6 @@ class ProvaQuestao extends Model
          foreach ($provaQuestoes as $provaQuestao) {
              $resposta = Resposta::where('id', $provaQuestao->resposta_escolhida_id)->get();
              if($resposta[0]->is_correct == 1) {
-                 var_dump($provaQuestao->questao_id);
-                 var_dump($resposta[0]->texto_resposta);
                 $grade++;
              }
          }
